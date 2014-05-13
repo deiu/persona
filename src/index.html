@@ -22,39 +22,59 @@
           <span class="icon-bar"></span>
         </button>
 
-      <div ui-sref-active="active">
-        <a href ui-sref="home">
-          <i class="fa fa-home"></i>
-          Home
+      <div class="avatar-frame">
+        <a href ui-sref="profile">
+          <img src="https://deiu.rww.io/profile/avatar.jpg" class="profile-img" />
         </a>
       </div>
-      <div ui-sref-active="active">
-        <a href ui-sref="about">
-          <i class="fa fa-info-circle"></i>
-          What is it?
-        </a>
-      </div>
-      <div>
-        <a href="https://github.com/ngbp/ngbp#readme">
-          <i class="fa fa-book"></i>
-          Read the Docs
-        </a>
-      </div>
-      <div>
-        <a href="https://github.com/ngbp/ngbp">
-          <i class="fa fa-github-alt"></i>
-          Github
-        </a>
-      </div>
-      <div>
-        <a href="https://github.com/ngbp/ngbp/issues">
-          <i class="fa fa-comments"></i>
-          Support
-        </a>
-      </div>
+
+      <i class="fa fa-ellipsis-h fa-2x dark-grey"></i>
+      
+      <a href ui-sref="dash">
+        <div ui-sref-active="dash" class="active">
+        
+          <i class="fa fa-bar-chart-o fa-3x"></i>
+          <p>Dashboard</p>
+        </div>
+      </a>
+      
+
+      <i class="fa fa-ellipsis-h fa-2x dark-grey"></i>
+
+      <a href ui-sref="feeds">
+        <div ui-sref-active="feeds">
+          <i class="fa fa-rss fa-3x"></i>
+          <p>Subscriptions</p>
+        </div>
+      </a>
+
+      <i class="fa fa-ellipsis-h fa-2x dark-grey"></i>
+
+      <a href ui-sref="chats">
+        <div ui-sref-active="chats">
+          <i class="fa fa-comments-o fa-3x"></i>
+          <p>Chats</p>
+        </div>
+      </a>
+
+      <i class="fa fa-ellipsis-h fa-2x dark-grey"></i>
+
+      <a href ui-sref="settings">
+        <div class="settings">
+          <i class="fa fa-cogs fa-3x"></i>
+          <p>Settings</p>
+        </div>
+      </a>
+
+      <a href ui-sref="logout">
+        <div class="logout">
+          <i class="fa fa-power-off fa-3x orange"></i>
+          <p>Logout</p>
+        </div>
+      </a>
     </div>
 
-    <div ui-view="main"></div>
+    <div ui-view="main" class="main"></div>
 
     <footer class="footer">
       <div class="container">

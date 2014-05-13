@@ -75,6 +75,13 @@ h2 {
   }
 }
 
+/**
+ * Main
+ */
+.main {
+  text-align: center;
+  margin-top: 50px;
+}
 
 /**
  * Footer
@@ -82,6 +89,7 @@ h2 {
 
 .footer {
   margin-top: 80px;
+  text-align: center;
 
   .footer-inner {
     padding: 40px 0;
@@ -116,12 +124,12 @@ h2 {
  */
 .icon-bars-button {
   float: left;
-  position: relative;
+  position: absolute;
   display: inline-block;
   vertical-align:middle;
   height: 40px;
   padding-top: 9px;
-  left: 150px;
+  left: 160px;
   top: 10px;
   background-color: #FF5140;
 }
@@ -136,36 +144,99 @@ h2 {
 }
 
 .sidebar {
-    -moz-transition: left .3s;
-    -webkit-transition: left .3s;
-    -o-transition: left .3s;
-    transition: left .3s;
-    width: 140px;
-    background-color: #2A3137;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: -140px;
+  -moz-transition: left .3s;
+  -webkit-transition: left .3s;
+  -o-transition: left .3s;
+  transition: left .3s;
+  width: 150px;
+  background-color: #2A3137;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: -150px;
+  text-align: center;
 }
 .sidebar div {
-  float: left;
-  margin-top: 10px;
-}
-.sidebar a, .sidebar a:visited {
   color: #fff;
+  margin-top: 10px;
+  text-align: center;
 }
 
+.sidebar a, .sidebar a:hover, .sidebar a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar a:hover i {
+  color: #FF5140;
+}
+.sidebar p {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.sidebar .active {
+
+}
 .slide-out {
-    -moz-transition: left .3s;
-    -webkit-transition: left .3s;
-    -o-transition: left .3s;
-    transition: left .3s;
-    left: 0px;
+  -moz-transition: left .3s;
+  -webkit-transition: left .3s;
+  -o-transition: left .3s;
+  transition: left .3s;
+  left: 0px;
 }
 
-div {
-   text-align: center;
+/**
+ * Profile
+ */
+.avatar-frame {
+  border: 0px;
+  margin-bottom: 10px;
 }
+.avatar-frame,.avatar-frame img {
+  position: relative;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 70px; /* Saf3+, Chrome */
+  border-radius: 70px; /* Opera 10.5, IE 9 */
+  /*-moz-border-radius: 70px;  Disabled for FF1+ */
+  }
+
+/**
+ * Other
+ */
+
+.orange {
+  color: #FF5140;
+}
+
+.light-grey {
+  color: #F1F1F1;
+}
+
+.dark-grey {
+  color: #4C5053;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-left {
+  float: right;
+}
+
+.pull-top {
+  top: 0px;
+}
+
+.logout {
+  position: absolute;
+  left: 50%;  
+  bottom: 0px;
+  margin-left: -30px;
+}
+
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
