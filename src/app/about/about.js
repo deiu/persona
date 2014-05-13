@@ -1,4 +1,4 @@
-angular.module( 'Persona.about', [
+angular.module( 'Cimba.about', [
   'ui.router',
   'placeholders',
   'ui.bootstrap'

@@ -1,9 +1,10 @@
-angular.module( 'Persona', [
+angular.module( 'Cimba', [
   'templates-app',
   'templates-common',
-  'Persona.home',
-  'Persona.about',
-  'ui.router'
+  'Cimba.home',
+  'Cimba.about',
+  'ui.router',
+  'ngProgress'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
@@ -13,10 +14,10 @@ angular.module( 'Persona', [
 .run( function run () {
 })
 
-.controller( 'MainCtrl', function AppCtrl ( $scope, $location ) {
+.controller( 'MainCtrl', function AppCtrl ( $scope, $location, $timeout, ngProgress ) {
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
-      $scope.pageTitle = toState.data.pageTitle + ' | Persona' ;
+      $scope.pageTitle = toState.data.pageTitle + ' | Cimba' ;
     }
   });
 
