@@ -1,17 +1,17 @@
-describe( 'AppCtrl', function() {
+describe( 'MainCtrl', function() {
   describe( 'isCurrentUrl', function() {
-    var AppCtrl, $location, $scope;
+    var MainCtrl, $location, $scope;
 
-    beforeEach( module( 'ngBoilerplate' ) );
+    beforeEach( module( 'Cimba' ) );
 
     beforeEach( inject( function( $controller, _$location_, $rootScope ) {
       $location = _$location_;
       $scope = $rootScope.$new();
-      AppCtrl = $controller( 'AppCtrl', { $location: $location, $scope: $scope });
+      MainCtrl = $controller( 'MainCtrl', { $location: $location, $scope: $scope });
     }));
 
     it( 'should pass a dummy test', inject( function() {
-      expect( AppCtrl ).toBeTruthy();
+      expect( MainCtrl ).toBeTruthy();
     }));
   });
 });

@@ -88,7 +88,7 @@ h2 {
  */
 
 .footer {
-  margin-top: 80px;
+  margin-top: 10px;
   text-align: center;
 
   .footer-inner {
@@ -131,9 +131,8 @@ h2 {
   padding-top: 9px;
   left: 160px;
   top: 10px;
-  background-color: #FF5140;
+  background-color: #FF3C1F;
 }
-
 .icon-bar {
   margin-bottom:4px;
   display: block;
@@ -142,7 +141,6 @@ h2 {
   background-color: #fff;
   border-radius: 2px;
 }
-
 .sidebar {
   -moz-transition: left .3s;
   -webkit-transition: left .3s;
@@ -151,17 +149,22 @@ h2 {
   width: 150px;
   background-color: #2A3137;
   position: absolute;
+  min-height: 700px;
   top: 0px;
+  padding-top: 10px;
   bottom: 0px;
   left: -150px;
   text-align: center;
 }
-.sidebar div {
-  color: #fff;
-  margin-top: 10px;
-  text-align: center;
+.sidebar .menu-item {
+  width: 150px;
+  min-height: 86px;
 }
 
+.sidebar div {
+  color: #fff;
+  text-align: center;
+}
 .sidebar a, .sidebar a:hover, .sidebar a:visited {
   color: #fff;
   text-decoration: none;
@@ -173,9 +176,6 @@ h2 {
   color: #fff;
   font-size: 1.2em;
   font-weight: bold;
-}
-.sidebar .active {
-
 }
 .slide-out {
   -moz-transition: left .3s;
@@ -193,8 +193,7 @@ h2 {
   margin-bottom: 10px;
 }
 .avatar-frame,.avatar-frame img {
-  position: relative;
-  left: 10px;
+  margin-left: -10px;
   width: 100px;
   height: 100px;
   -webkit-border-radius: 70px; /* Saf3+, Chrome */
@@ -205,6 +204,18 @@ h2 {
 /**
  * Other
  */
+
+.badge {
+  position: relative;
+  right: -10px;
+  top: 10px;
+  background-color: #FF3C1F;
+  z-index:1000;
+}
+.avatar-frame .badge {
+  right: -100px;
+  top: -30px;
+}
 
 .orange {
   color: #FF5140;
@@ -237,6 +248,17 @@ h2 {
   margin-left: -30px;
 }
 
+/**
+ * Buttons
+ */
+.btn-primary {
+  background-color: #FF3C1F;
+  border-color: #FF5140;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #EA250B;
+  border-color: #FF3C1F;
+}
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for
