@@ -40,11 +40,11 @@ angular.module( 'Cimba.home', [
 .controller( 'HomeCtrl', function HomeController( $scope, $sce ) {
  
   // login/signup widget source
-  var providerURI = 'https://linkeddata.github.io/signup/index.html?ref=';
+  var providerURI = 'http://localhost/signup/index.html?ref=';
     
   // set the parameter in the src of iframe
   $scope.signupWidget = $sce.trustAsResourceUrl(providerURI+window.location.protocol+'//'+window.location.host);
-  
+
   // Event listener for login (from child iframe)
   var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
   var eventListener = window[eventMethod];
@@ -52,20 +52,16 @@ angular.module( 'Cimba.home', [
 
   // Listen to message from child window
   eventListener(messageEvent,function(e) {
-    var u = e.data;
     if (e.data.slice(0,5) == 'User:') {
-      $scope.authenticate(e.data.slice(5, e.data.length), true);
-      // clear previous posts  
-      $('#loginModal').modal('hide');
+      console.log(e.data);
+      $scope.authenticate(e.data.slice(5, e.data.length), true); 
     }
-    if (e.data.slice(0,7) == 'iframe=') {
-      var size = e.data.slice(7, e.data.length).split(':');
-      if (size.length > 0) {
-        $scope.signupWidth = size[0];
-        $scope.signupHeight = size[1];
-      }
+    if (e.data.slice(0,6) == "cancel") {
+      $scope.showLogin = false;
+      $scope.$apply();
     }
   },false);
+
  })
 
 ;

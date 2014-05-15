@@ -11,16 +11,12 @@
 
 
 
-  <!--login modal-->
+  <!--login screen -->
   <div id="loginModal" ng-show="showLogin">
     <div class="login-frame">
       <h2 class="text-center">Login / Sign Up</h2>
 
-      <iframe ng-src="{{signupWidget}}" sandbox="allow-same-origin allow-scripts allow-forms" frameborder="0" height="{{signupHeight}}" width="{{signupWidth}}"></iframe>
-
-      <div class="col-md-12">
-        <button class="btn btn-info" ng-click="showLogin=!showLogin">Cancel</button>
-      </div>  
+      <iframe ng-src="{{signupWidget}}" sandbox="allow-same-origin allow-scripts allow-forms" frameborder="0"></iframe>
 
     </div>
   </div>
