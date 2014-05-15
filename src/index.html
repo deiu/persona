@@ -19,13 +19,13 @@
   </head>
   <body>
     <div ng-class="showMenu?'slide-out':''" class="sidebar left-menu">
-        <button type="button" ng-click="showMenu=!showMenu" class="btn icon-bars-button" alt="Toggle navigation">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <button type="button" ng-click="showMenu=!showMenu" class="btn icon-bars-button" alt="Toggle navigation">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-      <div ng-show="user">
+      <div ng-show="userProfile" ng-click="showMenu=false">
 
         <div class="menu-item avatar-frame">
           <a href ui-sref="profile">
@@ -37,7 +37,7 @@
         <i class="fa fa-ellipsis-h fa-2x dark-grey"></i>
         
         <div class="menu-item">
-          <a href ui-sref="dash">
+          <a href ui-sref="home">
             <div>
               <i class="fa fa-bar-chart-o fa-3x"></i>
               <p>Dashboard</p>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="menu-item">
-          <a href ui-sref="feeds">          
+          <a href ui-sref="subscriptions">          
             <span class="badge">4</span>
             <div>
               <i class="fa fa-rss fa-3x"></i>
@@ -77,9 +77,9 @@
           </a>
         </div>
 
-        <div class="menu-item">
+        <div class="">
           <a href ng-click="logout()">
-            <div class="logout">
+            <div class="logout menu-item">
               <i class="fa fa-power-off fa-3x orange"></i>
               <p>Logout</p>
             </div>
@@ -87,15 +87,13 @@
         </div>
       </div>
 
-      <div ng-hide="user">
-        <div class="menu-item">
-          <a href ng-click="login()">
-            <div>
-              <i class="fa fa-power-off fa-3x"></i>
-              <p>Login</p>
-            </div>
-          </a>
-        </div>
+      <div ng-hide="userProfile" ng-click="showMenu=false">
+        <a href ng-click="login()">
+          <div class="menu-item">
+            <i class="fa fa-power-off fa-3x"></i>
+            <p>Login</p>
+          </div>
+        </a>
       </div>
     </div>
 
