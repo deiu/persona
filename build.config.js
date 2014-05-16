@@ -68,7 +68,7 @@ module.exports = {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-utils/modules/route/route.js',
       'vendor/ngProgress/ngProgress.min.js',
-      'vendor/ngMidwayTester/ngMidwayTester.js'
+      'vendor/rdflib.js/rdflib.js'
     ],
     css: [
       'vendor/ngProgress/ngProgress.less',

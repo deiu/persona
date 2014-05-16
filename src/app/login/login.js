@@ -39,9 +39,7 @@ angular.module( 'Cimba.login', [
     if (webid && (webid.substr(0, 4) == 'http')) {
       $scope.userProfile = {};
       $scope.userProfile.webid = webid;
-      $scope.profileloading = true;
-      $scope.testwebid = false;
-      // $scope.getInfo(webid, true);
+      $scope.$parent.loginSuccess = true;
       // add/refresh WebID on webizen.org
       $http.get('http://api.webizen.org/v1/search', {
         params: {
